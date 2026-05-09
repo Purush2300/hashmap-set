@@ -1,32 +1,38 @@
-import java.util.*;
-import java.util.Arrays;
+import java.util.HashMap;
+
 public class New {
     public static void main(String[] args) {
-    int []a={1,2,3,4,5};
-  int k=2;
-int n=a.length;
-k=k%n;
-int[]temp=new int[k];
+    
+int[]arr={12,4,3,4,5,6};
+   HashMap<Integer, Integer> map = new HashMap<>();
 
-for (int i = 0; i < k; i++) {
-    temp[i]=a[i];
-}
-for (int i = k; i < n; i++) {
-    a[i-k]=a[i];
-}
+      int k=7;
+        map.put(0, 1);
 
+        int sum = 0;
+        int count = 0;
 
-    for (int i = 0; i < k; i++) {
-       
-           a[n-k+1] =temp[i];
+        for(int i = 0; i < arr.length; i++) {
+
+            sum += arr[i];
+
+            // check if (sum-k) exists
+            if(map.containsKey(sum - k)) {
+
+                count += map.get(sum - k);
+            }
+
+            // store frequency
+            map.put(sum, map.getOrDefault(sum, 0) + 1);
         }
-        for (int i = 0; i < a.length; i++) {
-            System.out.println(a[i]);
-        }
+
+        System.err.println(count);
+    }
+    }
+  
+
+
+
+
         
-
-    }
-   
-   
-    }
 
