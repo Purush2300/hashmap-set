@@ -1,6 +1,6 @@
 public class Palindrom {
     public static void main(String[] args) {
-        String s="  hello      world  ";
+        String s="  puru      world  ";
        s= s.trim();
         String[]arr=s.split("\\s+");
         String ans="";
