@@ -1,6 +1,6 @@
 public class Subarray {
  public static void main(String[] args) {
-     String s="35427";
+     String s="35426";
      
      for(int i=s.length()-1;i>=0;i--) {
             char ch=s.charAt(i);
