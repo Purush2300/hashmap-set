@@ -1,16 +1,45 @@
+import java.util.HashMap;
+
 public class Subarray {
  public static void main(String[] args) {
-     String []s={"flower","flow","flight"};
-     String prif=s[0];
-    for(int i=0;i<prif.length();i++){
-        char ch=prif.charAt(i);
-        for(int j=0;j<s.length;j++){
-            if(i>=s[j].length()||s[j].charAt(i)!=ch){
-                System.err.println(prif.substring(0,i));
-                return ;
+    HashMap<Character, Character> map1=new HashMap<>();
+    HashMap<Character, Character> map2=new HashMap<>();
+    String s="foo";
+    String t="bag";
+
+    for(int i=0;i<s.length();i++){
+        char c1=s.charAt(i);
+        char c2=t.charAt(i);
+        if(map1.containsKey(c1)){
+            if(map1.get(c1)!=c2){
+               System.err.println("false");
+               return;
             }
         }
+        else{
+            map1.put(c1, c2);
+        }
+
+        if(map2.containsKey(c2)){
+            if(map2.get(c2)!=c1){
+               System.err.println("false");
+               return;
+            }
+        }
+        else{
+            map2.put(c2, c1);
+        }
+
+
+
+
     }
-     System.err.println(prif);
+
+System.err.println("true");
+return;
+
+
+
+
  }   
 }
