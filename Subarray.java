@@ -1,15 +1,16 @@
 public class Subarray {
  public static void main(String[] args) {
-     String s="35426";
-     
-     for(int i=s.length()-1;i>=0;i--) {
-            char ch=s.charAt(i);
-            if((ch-'0')%2!=0){
-                    System.err.println(s.substring(0, i+1));
-                    return;
+     String []s={"flower","flow","flight"};
+     String prif=s[0];
+    for(int i=0;i<prif.length();i++){
+        char ch=prif.charAt(i);
+        for(int j=0;j<s.length;j++){
+            if(i>=s[j].length()||s[j].charAt(i)!=ch){
+                System.err.println(prif.substring(0,i));
+                return ;
             }
-            
         }
-        System.err.println(" ");
+    }
+     System.err.println(prif);
  }   
 }
