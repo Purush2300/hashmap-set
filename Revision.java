@@ -1,17 +1,35 @@
 
-import java.util.Arrays;
-
+import java.util.*;
 public class Revision {
     public static void main(String[] args) {
-        String s="anagram";
-        String t="nagaram";
-        
-        char[]arr=s.toCharArray();
-        char[]arr1=t.toCharArray();
-        Arrays.sort(arr);
-        Arrays.sort(arr1);
-        System.out.println(Arrays.equals(arr, arr1));
-           
-        
+        String s="aa";
+        String t="ba";
+       HashMap<Character,Character> map1=new HashMap<>();
+        HashMap<Character,Character> map2=new HashMap<>();
+        for(int i=0;i<s.length();i++){
+            char c1=s.charAt(i);
+            char c2=t.charAt(i);
+        if(map1.containsKey(c1)){
+            if(map1.get(c1)!=c2){
+                System.out.println("False");
+                return ;
+            }
+        }
+        else{
+                map1.put(c1, c2);
+            }
+
+        if(map2.containsKey(c2)){
+            if(map2.get(c2)!=c1){
+                System.out.println("false");
+                return;
+            }
+        }
+        else{
+                map2.put(c2, c1);
+            }
+
+        }
+        System.err.println("True");
     }
 }
