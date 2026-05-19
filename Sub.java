@@ -4,15 +4,13 @@ public class Sub {
         String s="ababa";
             for(int i=0;i<s.length();i++){
                 for(int j=i+1;j<=s.length();j++){
-                    if(palindrome(s,i,j)){
-                        String sub=s.substring(i,j);
-                        if(sub.length()>ma.length()){
-                            ma=sub;
-                        }
+                    if(palindrome(s,i,j-1)){
+                    System.out.println(s.substring(i,j));
+                        
                     }
                 }
             }
-System.err.println(ma);
+
         
         
     }
