@@ -1,6 +1,6 @@
 public class Koko {
     public static void main(String[] args) {
-        int[]a={13,16,17,11};
+        int[]a={13790,132426,170,1170};
         int h=8;
         int i=1;int j=max(a);
 
