@@ -1,15 +1,28 @@
 public class Captial {
     public static void main(String[] args) {
-        String s="how         are you purush";
-        char[]c=s.toCharArray();
-        if(c[0]>='a'&&c[0]<='z'){
-            c[0]=(char)(c[0]-32);
-        }
-        for(int  i=1;i<c.length;i++){
-            if(c[i-1]==' '&&c[i]>='a'&&c[i]<='z'){
-                c[i]=(char)(c[i]-32);
+        String s="cbbd";
+        String ans="";
+        for(int i=0;i<s.length();i++){
+            for(int j=i;j<s.length();j++){
+                String sub=s.substring(i,j+1);
+                if(palindrom(sub)&& sub.length()>ans.length()){
+                    ans=sub;
+                }
             }
         }
-        System.err.println(c);
+        System.out.println(ans);
+        
+    }
+    public static boolean  palindrom(String s){
+        int i=0;
+        int j=s.length()-1;
+        while(i<=j){
+            if(s.charAt(i)!=s.charAt(j)){
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
     }
 }
