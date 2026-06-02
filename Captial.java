@@ -1,6 +1,6 @@
 public class Captial {
     public static void main(String[] args) {
-        String s="cbbd";
+        String s="cbbdwqeiu";
         String ans="";
         for(int i=0;i<s.length();i++){
             for(int j=i;j<s.length();j++){
