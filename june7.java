@@ -1,25 +1,35 @@
 public class june7 {
     public static void main(String[] args) {
         
-        int[]arr={1,2,3,4,5};
-        int n=arr.length;
-        int k=2;
-        // Right rotate----}
-        k=k%n;
-        int []temp=new int[k];
+        int[]arr1={1,2,3,4,5};
+        int[] arr2={1,2,3,6,7,8};
+        int a=arr1.length;
+        int b=arr2.length;
+    
+        int []temp=new int[a+b];
+        int k=0;
+        int i=0;
+        int j=0;
+        while(i<a && j<b){
+            if(arr1[i]<arr2[j]){
+                temp[k++]=arr1[i];
+            }
+            else{
+                temp[k++]=arr2[j];
+            }
+            i++;
+            j++;
 
-        for(int i=0;i<k;i++){
-              temp[i]=arr[i];
         }
-   
-        for(int i=k;i<n;i++){
-        arr[i-k]=arr[i];
+        while(i<a){
+            temp[k++]=arr1[i++];
         }
-        for(int i=0;i<k;i++){
-            arr[n-k+i]=temp[i];
+        while(j<b){
+            temp[k++]=arr2[j++];
         }
-        for(int i=0;i<arr.length;i++){
-       System.out.print(arr[i]+" ");
-       }
+        for(int p=0;p<temp.length;p++){
+            System.out.print(temp[p]+" ");
+        }
     }
+
 }
