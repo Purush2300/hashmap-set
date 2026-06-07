@@ -1,17 +1,25 @@
 public class june7 {
     public static void main(String[] args) {
-        int largest =Integer.MIN_VALUE;
-        int secondLargest=Integer.MIN_VALUE;
-        int[]arr={12,35,1,10,34,1};
-        for(int i=0;i<arr.length;i++){
-                if(arr[i]>largest){
-                    secondLargest=largest;
-                    largest=arr[i];
-                }
-                else if(arr[i]>secondLargest &&arr[i]!=largest){
-                    secondLargest=arr[i];
-                }
+        
+        int[]arr={1,2,3,4,5};
+        int n=arr.length;
+        int k=2;
+        // Right rotate----}
+        k=k%n;
+        int []temp=new int[k];
+
+        for(int i=0;i<k;i++){
+               temp[i]=arr[n-k+i]; 
         }
-        System.out.println(secondLargest);
+   
+        for(int i=n-k-1;i>=0;i--){
+           arr[i+k] =arr[i];
+        }
+        for(int i=0;i<k;i++){
+       arr[i]=temp[i];
+        }
+        for(int i=0;i<arr.length;i++){
+       System.out.print(arr[i]+" ");
+       }
     }
 }
