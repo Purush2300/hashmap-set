@@ -1,36 +1,46 @@
 public class June11 {
     public static void main(String[]args){
-        int[]arr={2,3,1,6,5,4};
-        int i=arr.length-2;
-        
-        while(i>=0 && arr[i]>arr[i+1]){
-            i--;
+        int[][]arr={{1,2,3},{4,5,6},{7,8,9}};
+       int top=0;
+       int bottom=arr.length-1;
+       int left=0;
+       int right=arr[0].length-1;
+       int[]res=new int[arr.length*arr[0].length];
+       int k=0;
+        while(left<=right && top<=bottom){
+             for(int i=left;i<=right;i++){
+            res[k++]=arr[top][i];
         }
-           if(i>=0){
-             int j=arr.length-1;
-            while(arr[j]<=arr[i]){
-                j--;
-            }   
+        top++;
+        
+        for(int i=top;i<=bottom;i++){
+        res[k++]=arr[i][right];
            
-            int temp=arr[i];
-            arr[i]=arr[j];
-            arr[j]=temp;
+        }
+        right--;
+       if(top<=bottom){
+         for(int j=right;j>=left;j--){
+              res[k++]=arr[bottom][j];
+        }
+       }
+       bottom--;
+
+         if(left<=bottom){
+         for(int j=bottom;j>=top;j--){
+              res[k++]=arr[j][left];
+        }
+       }
+       left++;
+        }
+
+
+       
+            for(int j=0;j<res.length;j++){
+             System.err.print(res[j]+" ");
+            }
             
-        }
-        reverse(arr,i+1,arr.length-1);
-        
-        for(int k=0;k<arr.length;k++){
-            System.out.print(arr[k]+" ");
-        }
+      
     }
 
-    private static void reverse(int[] arr, int i, int j) {
-        while(i<=j){
-            int temp=arr[i];
-            arr[i]=arr[j];
-            arr[j]=temp;
-            i++;
-            j--;
-        }
-    }
+  
 }
