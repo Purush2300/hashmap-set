@@ -1,25 +1,30 @@
 
-import java.util.HashMap;
 
 
 
 public class July3{
 public static void main(String[] args) {
-    int[]arr={1,2,4,3,2,1};
-    int k=3;
-    int cnt=0;
-   HashMap <Integer,Integer>map=new HashMap<>();
-int prefix=0;
-map.put(0,1);
-for(int i=0;i<arr.length;i++){
-    prefix+=arr[i];
-    if(map.containsKey(prefix-k)){
-        cnt+=map.get(prefix-k);
+    int[]arr={1,4,2,3,1,1};
+    int k=5;
+    int maxlen=0;
+    int minlength=Integer.MAX_VALUE;
+    int cntmin=0;
+    for(int i=0;i<arr.length;i++){
+       int prefix=0;
+        for(int j=i;j<arr.length;j++){
+            prefix+=arr[j];
+            if(prefix==k && j-i+1 >maxlen){
+                maxlen=j-i+1;
+            }
+             if(prefix==k && j-i+1 <minlength){
+                cntmin++;
+                minlength=j-i+1;
+                
+            }
+        }
     }
-    map.put(prefix, map.getOrDefault(prefix, 0) + 1);
-}
-     
-  System.out.println(cnt);
-
+System.out.println(maxlen);
+System.out.println(minlength+" mininumlength");
+System.out.println(cntmin);
 }
 }
