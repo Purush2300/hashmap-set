@@ -7,7 +7,7 @@ public class Freqency {
         int maxfeq=Integer.MIN_VALUE ,maxele=0;
         int minfreq=Integer.MAX_VALUE,minele=0;
         HashMap<Integer,Integer> map=new HashMap<>();
-            int[]a={1,1,1,1,5,3,7,2,};
+            int[]a={1,1,1,1,5,3,7,2,2,7,7,7};
             for(int i=0;i<a.length;i++){
                 map.put(a[i], map.getOrDefault(a[i],0)+1);
             }
