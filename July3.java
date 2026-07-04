@@ -4,7 +4,7 @@
 
 public class July3{
 public static void main(String[] args) {
-    int[]arr={1,4,2,3,1,1};
+    int[]arr={1,4,2,3,1};
     int k=5;
     int maxlen=0;
     int minlength=Integer.MAX_VALUE;
