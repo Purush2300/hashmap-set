@@ -3,7 +3,7 @@ import java.util.HashMap;
 public class New {
     public static void main(String[] args) {
     
-int[]arr={12,4,3,4,3,4,5,2,2,5,6};
+int[]arr={12,4,3,4,3,4,6,6,4,3,45,2,2,5,6};
    HashMap<Integer, Integer> map = new HashMap<>();
 
       int k=7;
