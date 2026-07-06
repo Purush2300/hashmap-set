@@ -3,7 +3,7 @@ import java.util.HashSet;
 
 public class July6 {
     public static void main(String[] args) {
-       String s="pwwkew";
+       String s="abcabc";
        HashSet <Character> set=new HashSet<>();
        int i=0;
        int len=0;
