@@ -1,19 +1,26 @@
+
+import java.util.HashSet;
+
 public class July6 {
     public static void main(String[] args) {
-       String s="a";
-       String a="";
+       String s="pwwkew";
+       HashSet <Character> set=new HashSet<>();
        int i=0;
-       int j=i+1;
        int len=0;
-       while(i<s.length() && j<s.length()){
-        char c1=s.charAt(i);
-        char c2=s.charAt(j);
-        if(c1==c2){
-            i++;
-        }
-        len=Math.max(len, j-i+1);
-        j++;
+       for(int j=0;j<s.length();j++){
+            if(!set.contains(s.charAt(j))){
+        
+
+            }
+             while(set.contains(s.charAt(j))){
+                set.remove(s.charAt(i));
+                i++;
+            }
+                    set.add(s.charAt(j));
+                len=Math.max(len, j-i+1);
+            
        }
        System.out.println(len);
+       
     }
 }
