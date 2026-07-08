@@ -1,5 +1,6 @@
 
 import java.util.HashMap;
+import java.util.Map;
 
 
 
@@ -15,7 +16,9 @@ public class june7 {
                 System.out.println(arr[i]);
             }
         }
-       
+       for (Map<K,V>.entry(null, null)) {
+        
+       }
             
    
       
