@@ -25,7 +25,7 @@ public class july8 {
              
              if(num[i]!=m &&num[j]!=m){
                 int sum=num[i]+num[j];
-                System.out.println("sum of"+" "+num[i]+" "+num[j]+"--> "+sum);
+                System.out.println("sum of the numbers"+" "+num[i]+" "+num[j]+"--> "+sum);
                     m1=Math.max(sum, m1);
                 System.out.println("Maxsum-->"+m1);
              }
