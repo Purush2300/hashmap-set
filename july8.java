@@ -2,7 +2,7 @@
 
 public class july8 {
     public static void main(String[] args) {
-       int[]num= {0,6,5,2,2,5,1,9,4};
+       int[]num= {0,6,5,2,2,50,11,9,4};
        int firstLen = 1;
        int secondLen = 2;
        
