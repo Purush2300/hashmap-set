@@ -1,25 +1,26 @@
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class July9{
     public static void main(String[] args) {
-      
-        int[]arr={2,7,11,15,3};
-        int target=10;
+        Scanner sc=new Scanner(System.in);
 
-      int[]a= Twosum(arr,target);
-      System.out.println(a[0]+" "+a[1]);
-    }
-
-    private static int[] Twosum(int[] arr, int target) {
-          HashMap <Integer,Integer> map=new HashMap<>();
-        for(int i=0;i<arr.length;i++){
-            int value=target-arr[i];
-            if(map.containsKey(value)){
-                return new int[]{map.get(value),i};
-            }
-            map.put(arr[i],i);
+        HashMap<Integer,Integer> map=new HashMap<>();
+      int[]arr={1,1,2,2,2};
+      int max=0;
+      for(int i=0;i<arr.length;i++){
+        if(map.containsKey(arr[i])){
+          int prev=i-map.get(arr[i]);
+       
+          max=Math.max(max, prev);
         }
-        return new int[]{-1,-1};
+        if(!map.containsKey(arr[i])){
+          map.put(arr[i],i);
+        }
+      }
+      System.out.println(max);
     }
+
+   
 }
