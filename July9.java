@@ -1,25 +1,38 @@
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class July9{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-
-        HashMap<Integer,Integer> map=new HashMap<>();
-      int[]arr={1,1,2,2,2};
-      int max=0;
-      for(int i=0;i<arr.length;i++){
-        if(map.containsKey(arr[i])){
-          int prev=i-map.get(arr[i]);
+LinkedHashMap<Character,Integer> map=new LinkedHashMap<>();
+        String s="yy";
        
-          max=Math.max(max, prev);
+      
+        for(int i=0;i<s.length();i++){
+         map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0)+1);
         }
-        if(!map.containsKey(arr[i])){
-          map.put(arr[i],i);
+System.out.println(map);
+        for (Map.Entry<Character, Integer> en : map.entrySet()) {
+            Character key = en.getKey();
+            Integer val = en.getValue();
+            int size=val;
+            if(size==1){
+            
+              System.out.println(key);
+              return;
+             
+            }
+            
+            
         }
-      }
-      System.out.println(max);
+      
+              System.out.println("all are repeted");
+             
+            
+     
+     
     }
 
    
