@@ -7,7 +7,7 @@ public class July9{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
 LinkedHashMap<Character,Integer> map=new LinkedHashMap<>();
-        String s="abc";
+        String s="aaa";
        
       
         for(int i=0;i<s.length();i++){
