@@ -12,7 +12,7 @@ public class Newx {
         int maxele = -1;
         int minele = -1;
 
-        int[] a = {1,1,2,2,2,2,3,4};
+        int[] a = {1,1,2,2,2,2,3,4,4};
 
         for(int i = 0; i < a.length; i++) {
 
