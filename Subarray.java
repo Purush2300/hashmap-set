@@ -9,9 +9,9 @@ public class Subarray {
         map.put('L', 50);
         map.put('C', 100);
         map.put('D', 500);
-        map.put('M', 1000);
+        map.put('M', 100);
        
-String s= "MMMMMDD";
+String s= "MMMMMD";
     int total=0;
     for(int i=0;i<s.length();i++){
         int cur=map.get(s.charAt(i));
