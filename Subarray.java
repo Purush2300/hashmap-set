@@ -11,7 +11,7 @@ public class Subarray {
         map.put('D', 500);
         map.put('M', 100);
        
-String s= "MMMMMDD";
+String s= "VVVVV";
     int total=0;
     for(int i=0;i<s.length();i++){
         int cur=map.get(s.charAt(i));
