@@ -1,7 +1,7 @@
 public class Sub {
     public static void main(String[] args) {
        String ma="";
-        String s="ababa";
+        String s="ZZZZZZZZz";
             for(int i=0;i<s.length();i++){
                 for(int j=i+1;j<=s.length();j++){
                     if(palindrome(s,i,j-1)){
