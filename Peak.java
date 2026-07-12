@@ -1,6 +1,6 @@
 public class Peak {
     public static void main(String[] args) {
-        int []a={1, 2, 4, 5, 7, 8, 3};
+        int []a={1, 2, 4,  7, 8, 3};
         System.err.println(find(a));
     }
 
