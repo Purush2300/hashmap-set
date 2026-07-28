@@ -1,7 +1,7 @@
 
 public class Revision {
     public static void main(String[] args) {
-        String []s={"flower","floe"};
+        String []s={"flower","puru"};
         String p=s[0];
         for(int i=0;i<p.length();i++){
             char ch=p.charAt(i);
