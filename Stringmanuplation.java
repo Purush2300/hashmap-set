@@ -1,6 +1,6 @@
 public class Stringmanuplation {
     public static void main(String[] args) {
-        String s="purush";
+        String s="ayyappa";
         int i=3;
         // leftrotate(s,i);
         rightrotate(s,i);
